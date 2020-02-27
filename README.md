@@ -24,11 +24,11 @@ The original method of install and run as detailed below should also work but I 
 If on your system you have a different user directory, e.g. on volumio you would have "volumio" instead of "pi" then in every case above replace "pi" with "volumio".
 
 On some other OS like volumio you may also need to do all or some these commands before running the code (after doing sudo ./install.sh)
-sudo apt update
-sudo apt install python3
-sudo apt install python3-pip
-sudo pip3 install RPi.GPIO
-
+* sudo apt update
+* sudo apt install python3
+* sudo apt install python3-pip
+* sudo pip3 install RPi.GPIO
+* sudo pip3 install psutil --upgrade
 
 Original Pimorini Readme file...........
 # Fan Shim for Raspberry Pi
