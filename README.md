@@ -8,7 +8,7 @@ There is a txt file showing the changes needed to /etc/rc.local
 My  preferred  way to install this software is to clone it using Git and then run it using tmux as described below.
 * open a terminal
 * make a director using  "mkdir fanshim" so that it is "/home/pi/fanshim"
-* clone into that directory using "git clone https://github.com/DT-was-an-ET/fanshim-python-pwm.git  /home/pi/fanshim
+* clone into that directory using "git clone https://github.com/grayerbeard/fanshim-python-pwm.git  /home/pi/fanshim
 * go to "/home/pi/fanshim/example" and test by entering
 * "python3 automatic.py --on-threshold 45 --off-threshold 47 --delay 6 --brightness 2 –verbose”
 *  fan should run as Pi warms up, stop running by typing "ctrl c"
