@@ -135,12 +135,13 @@ class FanShim():
         #GPIO.output(self._pin_fancontrol, True if fan_state else False)
         #return True if fan_state else False
         # PWM Version
-        if status:
+        if fan_state:
             self.pwm_out.ChangeDutyCycle(self.pwm_speed)
             self.fan_state = True
         else:
             self.pwm_out.ChangeDutyCycle(0)
             self.fan_state = False
+        return self.fan_state
 
     def set_light(self, r, g, b):
         """Set LED.
