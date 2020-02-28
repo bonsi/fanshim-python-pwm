@@ -24,7 +24,7 @@ My  preferred  way to install this software is to clone it using Git and then ru
 * reboot and code should run automatically.  You can check its running by entering "tmux ls" in a terminal.
 
 The original method of install and run as detailed below should also work but I have not tested it as I prefer using tmux as I find it easier if I want to check what is going on or make changes.
-If on your system you have a different user directory, e.g. on volumio you would have "volumio" instead of "pi" then in every case above replace "pi" with "volumio". (Also edit the directories in tmux\_start.sh to replace "pi" with "volumio")
+If on your system you have a different user directory, e.g. on volumio you would have "volumio" instead of "pi" then in every case above replace "pi" with "volumio". (Also edit the directories in tmux\_start.sh to replace "pi" with "volumio" and change the directory used when you edid rc.local to suite the location of the code.)
 
 On some syatms the ./tmux_stress.sh command will not work due to lack of working vcgencmd and stress.
 
