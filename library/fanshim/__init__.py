@@ -35,6 +35,7 @@ class FanShim():
         #GPIO.setup(self._pin_fancontrol, GPIO.OUT)
         #GPIO.setup(self._pin_button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
         
+        print("hollo")
 
         #PWM Version
         GPIO.setwarnings(False)
