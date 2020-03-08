@@ -22,21 +22,20 @@ In a 100% load test for 15 minutes at 80% speed the CPU temperature on my R Pi 4
 #  Suggested method to install
 My  preferred  way to install this software is to clone it using Git and then run it using tmux as described below.
 * open a terminal
-* make a director using  "mkdir fanshim" so that it is "/home/pi/fanshim"
-* clone into that directory using "git clone https://github.com/grayerbeard/fanshim-python-pwm.git  /home/pi/fanshim
-* at the /home/pi/fanshim directory enter "sudo ./install.sh"
-* go to "/home/pi/fanshim/example" and test by entering
+* make a director using  "mkdir fanshim" so that it is "/home/volumio/fanshim"
+* clone into that directory using "git clone https://github.com/grayerbeard/fanshim-python-pwm.git  /home/volumio/fanshim
+* at the /home/volumio/fanshim directory enter "sudo ./install.sh"
+* go to "/home/volumio/fanshim/example" and test by entering
 * "python3 automatic.py --on-threshold 46 --off-threshold 44 --delay 6 --brightness 2 –verbose”
 *  fan should run as Pi warms up, stop running by typing "ctrl c"
 * install tmux if not installed already using "sudo apt install tmux"
 * test the tmux file by entering "./tmux_start.sh" check its running with "tmux ls" observe with "tmux a -t fanshim"
 * edit "/etc/rc.local" using the command "sudo nano /etc/rc.local" to add
-     "sudo -u pi bash /home/pi/fanshim/tmux_start.sh &"
+     "sudo -u pi bash /home/volumio/fanshim/tmux_start.sh &"
      before "exit 0" at the end of the file.
 * reboot and code should run automatically.  You can check its running by entering "tmux ls" in a terminal.
 
 The original method of install and run as detailed below should also work but I have not tested it as I prefer using tmux as I find it easier if I want to check what is going on or make changes.
-If on your system you have a different user directory, e.g. on volumio you would have "volumio" instead of "pi" then in every case above replace "pi" with "volumio". (Also edit the directories in tmux\_start.sh to replace "pi" with "volumio" and change the directory used when you edid rc.local to suite the location of the code.)
 
 On volumio my ./tmux_stress.sh command will not work due to lack of working vcgencmd and stress.
 
@@ -49,7 +48,8 @@ These are set within /fanshim/library/fanshim/\_\_init\_\_.py in this snipit of 
         
 These can be adjusted as required but only a limited range of values work.
 
-Original Pimorini Readme file........... note they run system using a service rather than tmux
+Original Pimorini Readme file........... note they run system using a service rather than tmux - not my style (or to be more honest competence and fear)
+
 # Fan Shim for Raspberry Pi
 
 [![Build Status](https://travis-ci.com/pimoroni/fanshim-python.svg?branch=master)](https://travis-ci.com/pimoroni/fanshim-python)
