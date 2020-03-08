@@ -1,3 +1,15 @@
+# What is this "Volumio Branch"
+Here I have made the minor edits required to make this work on volumio.
+To get this working o Volumio  from the issues getting the GPIO and Python3 working which are the same as for the original Pimorini code, there are also some changes because the coide is put in "/home/volumio/fanshim" instead of in "/home/pi/fanshim"
+
+The additional commands  to get the code running at all (even the original pimorini version ) include:
+(after doing sudo ./install.sh)
+* sudo apt update
+* sudo apt install python3
+* sudo apt install python3-pip
+* sudo pip3 install RPi.GPIO
+* sudo pip3 install psutil --upgrade
+
 #  What is this
 This is a modified version of the code for the Pimorini cooling fan set to run the Fan slower and quieter using Pulse Width Modulation (PWM).
 This is based on version 0.0.4 cloned on February 25th 2020 from https://github.com/pimoroni/fanshim-python  
@@ -26,14 +38,7 @@ My  preferred  way to install this software is to clone it using Git and then ru
 The original method of install and run as detailed below should also work but I have not tested it as I prefer using tmux as I find it easier if I want to check what is going on or make changes.
 If on your system you have a different user directory, e.g. on volumio you would have "volumio" instead of "pi" then in every case above replace "pi" with "volumio". (Also edit the directories in tmux\_start.sh to replace "pi" with "volumio" and change the directory used when you edid rc.local to suite the location of the code.)
 
-On some syatms the ./tmux_stress.sh command will not work due to lack of working vcgencmd and stress.
-
-On some other OS like volumio you may also need to do all or some these commands before running the code (after doing sudo ./install.sh)
-* sudo apt update
-* sudo apt install python3
-* sudo apt install python3-pip
-* sudo pip3 install RPi.GPIO
-* sudo pip3 install psutil --upgrade
+On volumio my ./tmux_stress.sh command will not work due to lack of working vcgencmd and stress.
 
 ## PWM Parameters
 These are set within /fanshim/library/fanshim/\_\_init\_\_.py in this snipit of code (frequency 4 Hz, PWM % 80)
@@ -44,7 +49,7 @@ These are set within /fanshim/library/fanshim/\_\_init\_\_.py in this snipit of 
         
 These can be adjusted as required but only a limited range of values work.
 
-Original Pimorini Readme file...........
+Original Pimorini Readme file........... note they run system using a service rather than tmux
 # Fan Shim for Raspberry Pi
 
 [![Build Status](https://travis-ci.com/pimoroni/fanshim-python.svg?branch=master)](https://travis-ci.com/pimoroni/fanshim-python)
