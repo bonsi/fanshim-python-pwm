@@ -2,6 +2,8 @@
 Here I have made the minor edits required to make this work on volumio.
 To get this working o Volumio  from the issues getting the GPIO and Python3 working which are the same as for the original Pimorini code, there are also some changes because the coide is put in "/home/volumio/fanshim" instead of in "/home/pi/fanshim"
 
+Volumio is a rather wonderful OS for R Pi for playing audio files see https://volumio.org/.  Although it seems to be based on raspian-jessie rather than the more recent Buster version. It seems to run OK on both R Pi 3 and R Pi 4.
+
 The additional commands  to get the code running at all (even the original pimorini version ) include:
 (after doing sudo ./install.sh)
 * sudo apt update
