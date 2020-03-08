@@ -6,6 +6,8 @@ I have added some tmux files to enable running /examples/automatic.py  automatic
 
 There is a txt file showing the changes needed to /etc/rc.local.
 
+See the  "Volumio Branch" for a version adapted for running on Volumio ( https://volumio.org/ ) [https://github.com/grayerbeard/fanshim-python-pwm/tree/volumio]
+
 In a 100% load test for 15 minutes at 80% speed the CPU temperature on my R Pi 4 (not over clocked) settled at 59 degrees C.
 #  Suggested method to install
 My  preferred  way to install this software is to clone it using Git and then run it using tmux as described below.
