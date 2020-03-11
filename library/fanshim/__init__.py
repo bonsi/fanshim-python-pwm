@@ -28,7 +28,7 @@ class FanShim():
         self._t_poll = None
 
         atexit.register(self._cleanup)
-
+8
         #Original Versiom
         #GPIO.setwarnings(False)
         #GPIO.setmode(GPIO.BCM)
@@ -42,7 +42,7 @@ class FanShim():
         GPIO.setmode(GPIO.BCM)
 
         # PWM Version added parameters
-        self.pwm_freq = 8
+        self.pwm_freq = 4
         self.pwm_speed = 80
         self.fan_state = True
 
