@@ -1,5 +1,5 @@
 # What is this "Volumio Branch"
-Here I have made the minor editthere are issues getting the GPIO and Python3 working which are the same as for the original Pimorini code, there are also some changes because the code is put in "/home/volumio/fanshim" instead of in "/home/pi/fanshim"
+Here I have made the minor edits to adjust for the "volumio" instead of "pi" user (the code is put in "/home/volumio/fanshim" instead of in "/home/pi/fanshim"). There are also issues getting the GPIO and Python3 working which are the same as for the original Pimorini code, there are also some changes because
 
 Volumio is a rather wonderful OS for R Pi for playing audio files see https://volumio.org/.  Although it seems to be based on raspian-jessie rather than the more recent Buster version, it seems to run OK on both R Pi 3 and R Pi 4.
 
