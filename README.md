@@ -32,7 +32,7 @@ My  preferred  way to install this software is to clone it using Git and then ru
 * install tmux if not installed already using "sudo apt install tmux"
 * test the tmux file by entering "./tmux_start.sh" check its running with "tmux ls" observe with "tmux a -t fanshim"
 * edit "/etc/rc.local" using the command "sudo nano /etc/rc.local" to add
-     "sudo -u pi bash /home/volumio/fanshim/tmux_start.sh &"
+     "sudo -u volumio bash /home/volumio/fanshim/tmux_start.sh &"
      before "exit 0" at the end of the file.
 * reboot and code should run automatically.  You can check its running by entering "tmux ls" in a terminal.
 
