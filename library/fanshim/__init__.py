@@ -28,7 +28,7 @@ class FanShim():
         self._t_poll = None
 
         atexit.register(self._cleanup)
-8
+
         #Original Versiom
         #GPIO.setwarnings(False)
         #GPIO.setmode(GPIO.BCM)
